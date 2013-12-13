@@ -7,6 +7,7 @@ gem 'rails', '3.2.14'
 
 gem 'pg'
 gem 'youtube_it'
+gem 'devise'
 gem "omniauth-google-oauth2", "~> 0.2.1"
 
 
