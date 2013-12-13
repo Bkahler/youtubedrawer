@@ -5,19 +5,21 @@ class User < ActiveRecord::Base
 
   attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :provider, :uid, :avatar
 
+  has_many :playlists, dependent: :destroy
+
   # METHODS ---------------------------------------------
   def self.from_omniauth(auth)
-    if current_user = User.find_by_email(auth.info.email)
-      current_user.provider = auth.provider
-      current_user.uid = auth.uid
-      current_user
+    if user = User.find_by_email(auth.info.email)
+      user.provider = auth.provider
+      user.uid = auth.uid
+      user
     else
-      where(auth.slice(:provider, :uid)).first_or_create do |current_user|
-        current_user.provider = auth.provider
-        current_user.uid = auth.uid
-        current_user.username = auth.info.name
-        current_user.email = auth.info.email
-        current_user.avatar = auth.info.image
+      where(auth.slice(:provider, :uid)).first_or_create do |user|
+        user.provider = auth.provider
+        user.uid = auth.uid
+        user.username = auth.info.name
+        user.email = auth.info.email
+        user.avatar = auth.info.image
       end
     end
   end

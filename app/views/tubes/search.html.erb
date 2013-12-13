@@ -1,0 +1,24 @@
+
+<div>
+  <center>
+    <div>
+     <iframe width="560" height="349" src="http://www.youtube.com/v/MfstYSUscBc&feature=youtube_gdata_player"></iframe>
+    </div>
+  </center>
+  <h3> Search Results </h3>
+  <% @results.videos.each do |x| %>
+  <div>
+    <%=x.title%>
+    <form>
+      <select>
+        <option value="1">Playlist1</option>
+        <option value="2">Playlist2</option>
+      </select>
+      <button>save</button><button>play</button><br>
+    <form>
+
+   <a href= <%=x.player_url%>> <img src= <%=x.thumbnails[0].url%> > </a> <br>
+   <%= x.embed_url%>
+   <%end%>
+  </div>
+<div>

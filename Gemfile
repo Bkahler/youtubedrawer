@@ -9,6 +9,7 @@ gem 'pg'
 gem 'youtube_it'
 gem 'devise'
 gem "omniauth-google-oauth2", "~> 0.2.1"
+gem 'pry'
 
 
 # Gems used only for assets and not required
