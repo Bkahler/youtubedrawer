@@ -17,6 +17,10 @@ html, body
     width: 100%;
 }
 
+#cboxOverlay{
+  background-color: black;
+}
+
 #cboxContent{
   background-color: black;
 }

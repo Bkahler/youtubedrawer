@@ -13,7 +13,7 @@
             <button>save</button><br>
           </form>
 
-          <a href="<%= x.embed_url%>" class="video_layer" ><img src= <%=x.thumbnails[0].url%> ></a>
+      <p><a href="javascript:void jQuery.colorbox({html:'<iframe width=800px height=600px src= <%= x.embed_url%>frameborder=0 prelaod=false allowfullscreen ></iframe>'})"><img src= <%=x.thumbnails[0].url%> ></a></p>
 
         </div>
       <%end%>
