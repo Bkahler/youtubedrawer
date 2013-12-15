@@ -1,15 +1,15 @@
-<head>
-</head>
 
 <div class='container'>
-    <%=render 'search' %>
-    <center>
 
+    <%=render 'search' %>
+    <% if current_user %>
+      <%=render 'create_playlist' %>
+    <%end%>
+    <center>
       <div>
         <% if @results !=nil%>
         <%=render 'results'%>
         <%end%>
       </div>
-
      </center>
 </div>
