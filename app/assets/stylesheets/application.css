@@ -14,7 +14,17 @@
 html, body
 {
     height: 100%;
+    width: 100%;
 }
+
+#cboxContent{
+  background-color: black;
+}
+
+/*.cboxIframe{
+  height: '90%';
+  width: '90%';
+}*/
 
 #result{
   border: 2px black solid;

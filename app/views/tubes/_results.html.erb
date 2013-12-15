@@ -10,13 +10,13 @@
               <option value="1">Playlist1</option>
               <option value="2">Playlist2</option>
             </select>
-            <button>save</button><button>play</button><br>
+            <button>save</button><br>
           </form>
-          <a href= <%=x.player_url%>> <img src= <%=x.thumbnails[0].url%> > </a> <br>
-          <%= x.embed_url%>
+
+          <a href="<%= x.embed_url%>" class="video_layer" ><img src= <%=x.thumbnails[0].url%> ></a>
+
         </div>
       <%end%>
-
     <%end%>
 <div>
 <center>
