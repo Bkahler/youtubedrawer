@@ -1,4 +1,18 @@
-<form method= "GET" action='/search'>
-  <input id= "search_term" type="text">
-  <input type= "submit" id='nytimes'>
-</form>
+<div class='container'>
+    <%=render 'search' %>
+    <center>
+      <% if @results!= nil %>
+        <iframe width="100%" height="500px" src="http://www.youtube.com/v/YxIiPLVR6NA&feature=youtube_gdata_player"></iframe>
+
+      <%else%>
+        <iframe width="75%" height="50%"  src="http://www.youtube.com/embed/"></iframe>
+      <%end%>
+
+    <div>
+      <% if @results !=nil%>
+      <%=render 'results'%>
+      <%end%>
+    </div>
+        </center>
+
+</div>

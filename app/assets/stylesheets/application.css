@@ -11,3 +11,19 @@
  *= require_self
  *= require_tree .
  */
+html, body
+{
+    height: 100%;
+}
+
+#result{
+  border: 2px black solid;
+  padding: 10px;
+  width:100%;
+}
+
+#results_container{
+  height: 400px;
+  overflow: scroll;
+  border: 4px green solid;
+}

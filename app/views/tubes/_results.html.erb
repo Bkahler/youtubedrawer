@@ -1,0 +1,22 @@
+<center>
+<div id= "results_container">
+  <h3> Search Results </h3>
+    <% if @results != nil %>
+      <% @results.videos.each do |x| %>
+        <div id= 'result' class="row col-md-4">
+          <%=x.title%>
+          <form>
+            <select>
+              <option value="1">Playlist1</option>
+              <option value="2">Playlist2</option>
+            </select>
+            <button>save</button><button>play</button><br>
+          </form>
+          <a href= <%=x.player_url%>> <img src= <%=x.thumbnails[0].url%> > </a> <br>
+          <%= x.embed_url%>
+        </div>
+      <%end%>
+
+    <%end%>
+<div>
+<center>
