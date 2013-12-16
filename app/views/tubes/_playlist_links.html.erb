@@ -1,0 +1,6 @@
+<div class="portfolioFilter">
+  <a href="#" data-filter=".results" class="current">Search Results</a>
+  <%current_user.playlists.each do |playlist|%>
+  <a href="#" data-filter=".<%= playlist.title %>"> <%= playlist.title %></a>
+  <%end%>
+</div>

@@ -1,16 +1,7 @@
-<div class="portfolioFilter">
-  <a href="#" data-filter="*" class="current">All Categories</a>
-  <%current_user.playlists.each do |playlist|%>
-  <a href="#" data-filter=".<%= playlist.title %>"> <%= playlist.title %></a>
-  <%end%>
-</div>
-
-<div class="portfolioContainer">
   <%current_user.playlists.each do |playlist|%>
     <% playlist.playlist_videos.each do |list|%>
-      <div class= "<%= playlist.title %>">
+      <div class= "<%= playlist.title %> vidlink">
         <a href="javascript:void jQuery.colorbox({html:'<iframe width=800px height=600px src= <%= list.video.embed_url%> frameborder=0 prelaod=false allowfullscreen ></iframe>'})"> <img src='<%=list.video.thumbnail%>'> </a>
       </div>
     <%end%>
   <%end%>
-</div>

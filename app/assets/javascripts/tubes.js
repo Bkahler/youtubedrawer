@@ -1,7 +1,7 @@
 $(window).load(function(){
     var $container = $('.portfolioContainer');
     $container.isotope({
-        filter: '*',
+        filter: '.results',
         animationOptions: {
             duration: 750,
             easing: 'linear',

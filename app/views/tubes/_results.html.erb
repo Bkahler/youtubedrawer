@@ -1,9 +1,9 @@
-<center>
-<div id= "results_container">
-  <h3> Search Results </h3>
+
+
     <% if @results != nil %>
       <% @results.videos.each do |video| %>
-        <div id= 'result' class="row col-md-4">
+
+        <div class="results vidlink">
           <%=video.title%>
 
           <form method= "POST" action='/addTo' name="playlist">
@@ -22,7 +22,6 @@
           <p><a href="javascript:void jQuery.colorbox({html:'<iframe width=800px height=600px src= <%= video.embed_url%>frameborder=0 prelaod=false allowfullscreen ></iframe>'})"><img src= <%=video.thumbnails[0].url%> ></a></p>
 
         </div>
+
       <%end%>
     <%end%>
-<div>
-<center>
