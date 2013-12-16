@@ -1,9 +1,7 @@
-
-<div class='container'>
-
     <%=render 'search' %>
     <% if current_user %>
       <%=render 'create_playlist' %>
+      <%=render 'playlists'%>
     <%end%>
     <center>
       <div>
@@ -11,5 +9,4 @@
         <%=render 'results'%>
         <%end%>
       </div>
-     </center>
-</div>
+    </center>

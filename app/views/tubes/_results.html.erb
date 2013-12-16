@@ -2,18 +2,24 @@
 <div id= "results_container">
   <h3> Search Results </h3>
     <% if @results != nil %>
-      <% @results.videos.each do |x| %>
+      <% @results.videos.each do |video| %>
         <div id= 'result' class="row col-md-4">
-          <%=x.title%>
-          <form>
-            <select>
-              <option value="1">Playlist1</option>
-              <option value="2">Playlist2</option>
+          <%=video.title%>
+
+          <form method= "POST" action='/addTo' name="playlist">
+            <select name="playlist_id" id="playlist_id">
+              <% @current_user.playlists.each do |list| %>
+                <option name="playlist_id" id="playlist_id" value= <%=list.id%> > <%=list.title%> </option>
+              <%end%>
             </select>
-            <button>save</button><br>
+            <input id="title" type="hidden" name="title" value= '<%= video.title%>' >
+            <input id="thumbnail" type="hidden" name="thumbnail" value= '<%=video.thumbnails[0].url%>' >
+            <input id="embed_url" type="hidden" name="embed_url" value= '<%= video.embed_url%>' >
+            <input name="authenticity_token" type="hidden" value="fO/N1gs9r2s5bnQM2C5InKTmTR2i9FEgg4VDL5MSBNs=" />
+            <input type="submit" value="save">
           </form>
 
-          <p><a href="javascript:void jQuery.colorbox({html:'<iframe width=800px height=600px src= <%= x.embed_url%>frameborder=0 prelaod=false allowfullscreen ></iframe>'})"><img src= <%=x.thumbnails[0].url%> ></a></p>
+          <p><a href="javascript:void jQuery.colorbox({html:'<iframe width=800px height=600px src= <%= video.embed_url%>frameborder=0 prelaod=false allowfullscreen ></iframe>'})"><img src= <%=video.thumbnails[0].url%> ></a></p>
 
         </div>
       <%end%>
