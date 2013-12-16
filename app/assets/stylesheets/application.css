@@ -11,32 +11,10 @@
  *= require_self
  *= require_tree .
  */
-/*html, body
-{
-    height: 100%;
-    width: 100%;
+
+#colorbox{
+  z-index: 5;
 }
-
-#cboxOverlay{
-  background-color: black;
-}
-
-#cboxContent{
-  background-color: black;
-}
-
-
-#result{
-  border: 2px black solid;
-  padding: 10px;
-  width:100%;
-}
-
-#results_container{
-  height: 400px;
-  overflow: scroll;
-  border: 4px green solid;
-}*/
 body {
     font-family: Arial;
 }
