@@ -1,11 +1,9 @@
 
-
     <% if @results != nil %>
       <% @results.videos.each do |video| %>
-
         <div class="results vidlink">
           <%=video.title%>
-
+          <% if current_user%>
           <form method= "POST" action='/addTo' name="playlist">
             <select name="playlist_id" id="playlist_id">
               <% @current_user.playlists.each do |list| %>
@@ -18,10 +16,11 @@
             <input name="authenticity_token" type="hidden" value="fO/N1gs9r2s5bnQM2C5InKTmTR2i9FEgg4VDL5MSBNs=" />
             <input type="submit" value="save">
           </form>
+          <%end%>
 
           <p><a href="javascript:void jQuery.colorbox({html:'<iframe width=800px height=600px src= <%= video.embed_url%>frameborder=0 prelaod=false allowfullscreen ></iframe>'})"><img src= <%=video.thumbnails[0].url%> ></a></p>
 
         </div>
+        <%end%>
 
-      <%end%>
     <%end%>

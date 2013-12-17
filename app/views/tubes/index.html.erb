@@ -1,8 +1,15 @@
-<%=render 'search' %>
+<div id="topBanner">
+  <div id="searchBar" >
+    <%=render 'search' %>
+  </div>
 <% if current_user %>
-  <%=render 'create_playlist' %>
-  <%=render 'playlist_links' %>
+  <div id="playlistBar">
+    <%=render 'create_playlist' %>
+    <%=link_to 'Edit Playlists',playlists_path %><br>
+    <%=render 'playlist_links' %>
+  </div>
 <%end%>
+</div>
 
 <div class="portfolioContainer">
   <% if @results !=nil%>

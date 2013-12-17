@@ -13,3 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+// var result_template = _.template("<div class='results vidlink'> </div>")

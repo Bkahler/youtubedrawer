@@ -12,6 +12,32 @@
  *= require_tree .
  */
 
+ #topBanner{
+    background-color: green;
+
+ }
+
+ header{
+    background-color: red;
+ }
+
+ body {
+    font-family: Arial;
+    background-color: #2c3e50;
+}
+
+img {
+    margin:5px;
+}
+
+ #searchForm{
+    padding: 10px;
+    background-color: gray;
+    border-radius: 9px;
+    width: 25%;
+    text-align: center;
+ }
+
 #colorbox{
   z-index: 5;
 }
@@ -19,9 +45,6 @@
 .vidlink{
 
   width:200px;
-}
-body {
-    font-family: Arial;
 }
 
 .portfolioFilter a {
@@ -34,9 +57,6 @@ body {
     font-weight:bold;
 }
 
-img {
-    margin:5px;
-}
 
 .isotope-item {
     z-index: 2;

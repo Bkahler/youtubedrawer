@@ -1,18 +1,15 @@
 class TubesController < ApplicationController
+
   def index
+    gon.current_user = current_user
   end
 
   def search
-    @current_user = current_user
+    gon.current_user = current_user
     query = params[:search]
     client = YouTubeIt::Client.new(:dev_key => ENV["YOUTUBE_API"])
-    @results = client.videos_by(:query => query, :page => 1, :per_page => 10)
+    @results = client.videos_by(:query => query, :page => 1, :per_page => 15)
     render :index
-  end
-
-  def create
-     @playlist = Playlist.create(title:params[:playlist], user_id:params[:id])
-     render :index
   end
 
   def addtoPlaylist
