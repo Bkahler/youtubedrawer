@@ -1,8 +1,6 @@
 $(function(){
   setTimeout(isotope,100);
    menuBar()
-   // ajaxCalls()
-
 });
 
 function menuBar(){
