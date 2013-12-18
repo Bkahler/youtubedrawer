@@ -1,22 +1,25 @@
 
     <% if @results != nil %>
       <% @results.videos.each do |video| %>
-        <div class="results vidlink" id="results">
-          <%=video.title%>
-          <% if current_user%>
-          <form method= "POST" action='/addTo' name="playlist">
-            <select name="playlist_id" id="playlist_id">
-              <% @current_user.playlists.each do |list| %>
-                <option name="playlist_id" id="playlist_id" value= <%=list.id%> > <%=list.title%> </option>
-              <%end%>
-            </select>
-            <input id="title" type="hidden" name="title" value= '<%= video.title%>' >
-            <input id="thumbnail" type="hidden" name="thumbnail" value= '<%=video.thumbnails[0].url%>' >
-            <input id="embed_url" type="hidden" name="embed_url" value= '<%= video.embed_url%>' >
-            <input name="authenticity_token" type="hidden" value="fO/N1gs9r2s5bnQM2C5InKTmTR2i9FEgg4VDL5MSBNs=" />
-            <input type="submit" value="save">
-          </form>
-          <%end%>
+        <div class="results vidlink " id="results">
+
+          <div class="caption">
+            <p class="resultTitles"><%=video.title%>(<%=Time.at(video.duration).gmtime.strftime('%M:%S')%>)</p>
+            <% if current_user%>
+            <form method= "POST" action='/addTo' name="playlist">
+              <select name="playlist_id" id="playlist_id">
+                <% @current_user.playlists.each do |list| %>
+                  <option name="playlist_id" id="playlist_id" value= <%=list.id%> > <%=list.title%> </option>
+                <%end%>
+              </select>
+              <input id="title" type="hidden" name="title" value= '<%= video.title%>' >
+              <input id="thumbnail" type="hidden" name="thumbnail" value= '<%=video.thumbnails[0].url%>' >
+              <input id="embed_url" type="hidden" name="embed_url" value= '<%= video.embed_url%>' >
+              <input name="authenticity_token" type="hidden" value="fO/N1gs9r2s5bnQM2C5InKTmTR2i9FEgg4VDL5MSBNs=" />
+              <input type="submit" value="save" class="current btn btn-a btn-b">
+            </form>
+            <%end%>
+          </div>
 
           <p><a href="javascript:void jQuery.colorbox({html:'<iframe width=800px height=600px src= <%= video.embed_url%>frameborder=0 prelaod=false allowfullscreen ></iframe>'})"><img src= <%=video.thumbnails[0].url%> ></a></p>
 
