@@ -6,14 +6,31 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <%= include_gon %>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 </head>
 <header>
-    <% if current_user %>
-      Welcome <%= current_user.email %> !
-      <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
-    <%else%>
-      <%= link_to "Sign In", new_user_session_path%>
-    <%end%>
+<%if current_user%>
+  <ul id="nav">
+    <li><a href="#" class="selected">Menu</a>
+      <ul>
+        <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+        <li><%= link_to "Edit Stacks", playlists_path%></li>
+      </ul>
+      <div class="clear"></div>
+    </li>
+    </ul>
+
+<%else%>
+   <ul id="nav">
+    <li><a href="#" class="selected">Menu</a>
+      <ul>
+        <li><%= link_to "Sign In", new_user_session_path%></li>
+      </ul>
+      <div class="clear"></div>
+    </li>
+    </ul>
+<%end%>
+
 </header>
 <body>
 

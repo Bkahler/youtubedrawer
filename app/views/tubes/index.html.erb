@@ -1,23 +1,28 @@
 <div id="topBanner">
   <div id="searchBar" >
+    <h1>VID STACKS</h1>
     <%=render 'search' %>
   </div>
 <% if current_user %>
   <div id="playlistBar">
     <%=render 'create_playlist' %>
-    <%=link_to 'Edit Playlists',playlists_path %><br>
-    <%=render 'playlist_links' %>
+
   </div>
+    <%=render 'playlist_links' %>
+
 <%end%>
 </div>
 
 <div class="portfolioContainer">
+
   <% if @results !=nil%>
+
     <%=render 'results'%>
   <%end%>
 
   <% if current_user %>
     <%=render 'playlists'%>
   <%end%>
+
 </div>
 

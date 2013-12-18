@@ -8,7 +8,7 @@ class TubesController < ApplicationController
     gon.current_user = current_user
     query = params[:search]
     client = YouTubeIt::Client.new(:dev_key => ENV["YOUTUBE_API"])
-    @results = client.videos_by(:query => query, :page => 1, :per_page => 15)
+    @results = client.videos_by(:query => query, :page => 1, :per_page => 18)
     render :index
   end
 

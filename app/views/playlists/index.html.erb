@@ -2,7 +2,7 @@
   <% @playlists.each do |list| %>
     <%if list.user_id == current_user.id%>
     <%=list.title%>
-    <%=link_to "delete", playlist_path(list),{:method=> :delete, :confirm => "sure ?" }  %><br>
+    <%=link_to "delete", playlist_path(list),{:method=> :delete, :class=>'delete', :confirm => "sure ?" }  %><br>
     <%end%>
   <%end%>
 <%end%>

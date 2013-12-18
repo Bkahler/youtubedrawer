@@ -1,7 +1,7 @@
 
     <% if @results != nil %>
       <% @results.videos.each do |video| %>
-        <div class="results vidlink">
+        <div class="results vidlink" id="results">
           <%=video.title%>
           <% if current_user%>
           <form method= "POST" action='/addTo' name="playlist">
