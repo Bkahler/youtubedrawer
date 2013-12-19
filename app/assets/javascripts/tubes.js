@@ -1,5 +1,5 @@
 $(function(){
-  setTimeout(isotope,100);
+  setTimeout(isotope,300);
    menuBar()
 });
 

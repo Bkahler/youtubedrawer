@@ -12,6 +12,20 @@
  *= require_tree .
  */
 
+ p span{
+   color: white;
+   font: bold 12px Helvetica, Sans-Serif;
+   background: rgba(0, 0, 0);
+   padding: 1px;
+
+ }
+
+ .videoImg{
+    height: auto;
+    min-width: 100%;
+    z-index: 0
+ }
+
  #Stacklinks{
     margin-right: auto;
     margin-left: auto;
@@ -30,6 +44,7 @@
    color:white;
    border: 0;
    border-radius: 0;
+   text-align: center;
   /* -webkit-appearance: none;*/
 }
 
@@ -41,8 +56,15 @@
 
 .resultTitles{
     color: white;
-     font-family: 'Varela Round', sans-serif;
-     font-size: 12px
+    font-family: 'Varela Round', sans-serif;
+    font-size: 12px;
+    z-index:1;
+    position: absolute;
+    top: 1px;
+    left: auto;
+    right:auto;
+    width: 90%;
+
 }
 
 .clear {clear:both}
@@ -207,7 +229,7 @@ img {
   text-align: center;
  /* border-radius: 90px;*/
   margin: 2px;
-  background-color: rgba(127, 140, 141,.3);
+/*  background-color: rgba(127, 140, 141,.3);*/
   text-decoration:none;
 
 }

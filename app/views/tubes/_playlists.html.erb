@@ -1,8 +1,9 @@
   <%current_user.playlists.each do |playlist|%>
     <% playlist.playlist_videos.each do |list|%>
     <% if list.video != nil%>
-      <div class= "<%= (playlist.title.gsub(/\s+/, "")).downcase %> vidlink">
-        <a href="javascript:void jQuery.colorbox({html:'<iframe width=800px height=600px src= <%= list.video.embed_url%> frameborder=0 prelaod=false allowfullscreen ></iframe>'})"> <img src='<%=list.video.thumbnail%>'> </a><br>
+      <div class= "<%= (playlist.title.gsub(/\s+/, "")).downcase %> vidlink">`
+        <p class="resultTitles"><span><%=list.video.title%></span></p>
+        <a href="javascript:void jQuery.colorbox({html:'<iframe width=800px height=600px src= <%= list.video.embed_url%> frameborder=0 prelaod=false allowfullscreen ></iframe>'})"> <img class='videoImg'src='<%=list.video.thumbnail%>'> </a><br>
         <%=link_to "delete", video_path(list.video.id),:method=> :delete, :class=>'delete', :confirm=> "sure ?" %>
       </div>
       <%end%>

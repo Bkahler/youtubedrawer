@@ -4,8 +4,14 @@
         <div class="results vidlink " id="results">
 
           <div class="caption">
-            <p class="resultTitles"><%=video.title%>(<%=Time.at(video.duration).gmtime.strftime('%M:%S')%>)</p>
-            <% if current_user%>
+            <p class="resultTitles"><%=video.title%> (<%=Time.at(video.duration).gmtime.strftime('%M:%S')%>)</p>
+            <p><a href="javascript:void jQuery.colorbox({html:'<iframe width=800px height=600px src= <%= video.embed_url%>frameborder=0 prelaod=false allowfullscreen ></iframe>'})"><img class='videoImg' src= <%=video.thumbnails[0].url%> ></a></p>
+
+          </div>
+
+
+
+          <% if current_user%>
             <form method= "POST" action='/addTo' name="playlist">
               <select name="playlist_id" id="playlist_id">
                 <% @current_user.playlists.each do |list| %>
@@ -19,9 +25,6 @@
               <input type="submit" value="save" class="current btn btn-a btn-b">
             </form>
             <%end%>
-          </div>
-
-          <p><a href="javascript:void jQuery.colorbox({html:'<iframe width=800px height=600px src= <%= video.embed_url%>frameborder=0 prelaod=false allowfullscreen ></iframe>'})"><img src= <%=video.thumbnails[0].url%> ></a></p>
 
         </div>
         <%end%>
