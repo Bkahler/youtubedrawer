@@ -11,6 +11,16 @@
  *= require_self
  *= require_tree .
  */
+h2{
+    color:white;
+}
+label{
+    color:white;
+}
+#edit_playlist{
+    color: white
+}
+
 
  p span{
    color: white;
@@ -89,9 +99,9 @@
     font-weight:700;
     height:23px;
     text-decoration:none;
-    color:#fff;
+    color:#2980b9;
     text-align:center;
-    color:#333;
+    color:#2980b9;
 }
 
 #nav li a:hover {
@@ -117,7 +127,7 @@
     display:block;
     height:15px;
     padding: 8px 5px;
-    color:#666;
+    color:#2980b9;
 }
 
 #nav ul a:hover {

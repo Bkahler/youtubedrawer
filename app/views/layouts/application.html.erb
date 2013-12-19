@@ -13,10 +13,11 @@
 <header>
 <%if current_user%>
   <ul id="nav">
-    <li><a href="#" class="selected">Menu</a>
+    <li><a href="#" class="selected" id="menu">Menu</a>
       <ul>
-        <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+        <li><%= link_to "home", tubes_path%></li>
         <li><%= link_to "Edit Stacks", playlists_path%></li>
+        <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
       </ul>
       <div class="clear"></div>
     </li>
@@ -24,7 +25,7 @@
 
 <%else%>
    <ul id="nav">
-    <li><a href="#" class="selected">Menu</a>
+    <li><a href="#" class="selected" id="menu">Menu</a>
       <ul>
         <li><%= link_to "Sign In", new_user_session_path%></li>
       </ul>

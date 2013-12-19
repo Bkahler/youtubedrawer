@@ -1,8 +1,13 @@
-<%if @playlists%>
-  <% @playlists.each do |list| %>
-    <%if list.user_id == current_user.id%>
-    <%=list.title%>
-    <%=link_to "delete", playlist_path(list),{:method=> :delete, :class=>'delete', :confirm => "sure ?" }  %><br>
+<div id="edit_playlist">
+  <h1> Your Stacks </h1>
+  <%if @playlists%>
+    <% @playlists.each do |list| %>
+      <%if list.user_id == current_user.id%>
+      <%=list.title%>
+      <%=link_to "delete", playlist_path(list),{:method=> :delete, :class=>'delete', :confirm => "sure ?" }  %><br>
+      <%end%>
     <%end%>
   <%end%>
-<%end%>
+</div>
+
+<li><%= link_to "home", tubes_path, {:class=>'delete'}%></li>
