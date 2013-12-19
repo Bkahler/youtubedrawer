@@ -12,7 +12,18 @@
  *= require_tree .
  */
 
+ #Stacklinks{
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+ }
 
+#searchBar{
+    float: left;
+}
+#playlistBar{
+    float: right;
+}
 .vidlink select{
    background: #2980b9;
    font-size:7pt;
@@ -25,7 +36,7 @@
 #SiteName{
     font-family:'Chelsea Market', cursive;
     color: #2980b9;
-    font-size: 50px;
+    font-size: 80px;
 }
 
 .resultTitles{
@@ -125,7 +136,6 @@ img {
     width: 50%;
     min-width: 300px;
     text-align: center;
-    border: 3px #2980b9 solid
  }
 
 
@@ -234,7 +244,7 @@ img {
 
 .portfolioFilter a {
     margin-right: 14px;
-    color:#bdc3c7;
+    color:#2980b9;
     text-decoration:none;
 }
 

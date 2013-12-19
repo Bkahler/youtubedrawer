@@ -1,17 +1,28 @@
 <div id="topBanner">
-  <div id="searchBar" >
-    <h1 id='SiteName'>VID STACKS </h1>
-    <%=render 'search' %>
+  <div id= 'logo'>
+    <h1 id='SiteName'>VID STACKS  <img src="/assets/play.png" height="50px"> </h1>
   </div>
-<% if current_user %>
-  <div id="playlistBar">
+  <div id= 'bars'>
+    <div id="searchBar" >
+      <%=render 'search' %>
+    </div>
+    <% if current_user %>
+    <div id="playlistBar">
     <%=render 'create_playlist' %>
-
+    </div>
   </div>
-    <%=render 'playlist_links' %>
-
 <%end%>
 </div>
+
+<center>
+<div id="Stacklinks">
+   <%=render 'playlist_links' %>
+ </div>
+ <hr size = 2 width=90% align="center" color="#2980b9">
+</center>
+
+
+
 
 <div class="portfolioContainer">
 
@@ -25,4 +36,4 @@
   <%end%>
 
 </div>
-
+ <hr size = 2 width=90% align="center" color="#2980b9">
