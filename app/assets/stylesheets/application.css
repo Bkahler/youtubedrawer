@@ -43,10 +43,12 @@ label{
  }
 
 #searchBar{
+    margin-right: 10px;
     float: left;
 }
 #playlistBar{
-    float: right;
+    margin-right: 10px;
+    float: left;
 }
 .vidlink select{
    background: #2980b9;
