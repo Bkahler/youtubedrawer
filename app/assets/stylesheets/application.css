@@ -43,11 +43,13 @@ label{
  }
 
 #searchBar{
-    margin-right: 10px;
+    margin-right:auto;
+    margin-left: auto;
     float: left;
 }
 #playlistBar{
-    margin-right: 10px;
+    margin-right:auto;
+    margin-left: auto;
     float: left;
 }
 .vidlink select{
@@ -167,7 +169,7 @@ img {
     padding: 15px;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 55%;
     min-width: 300px;
     text-align: center;
  }
